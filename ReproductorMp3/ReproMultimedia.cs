@@ -59,7 +59,7 @@ namespace ReproductorMp3
                 }
                 if (value > 59)
                 {
-                    Minutos++;
+                    
                     segundos = value % 60;
                     OnDesbordaTiempo(EventArgs.Empty);
                 }
@@ -85,6 +85,7 @@ namespace ReproductorMp3
         protected virtual void OnDesbordaTiempo(EventArgs e)
         {
             DesbordaTiempo?.Invoke(this, e);
+            Minutos++;
         }
 
 
@@ -92,6 +93,10 @@ namespace ReproductorMp3
         [Description("Se lanza cuando se clica el boton play/pause")]
 
         public event EventHandler PlayClick;
+        protected virtual void OnPlayClick(EventArgs e)
+        {
+            PlayClick?.Invoke(this, e);
+        }
         private void btnPlay_Click(object sender, EventArgs e)
         {
             if (Parado)
@@ -106,7 +111,7 @@ namespace ReproductorMp3
             }
             Refresh();
 
-            PlayClick?.Invoke(this, e);
+            OnPlayClick(e);
 
 
         }

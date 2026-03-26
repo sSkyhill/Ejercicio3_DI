@@ -80,9 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ReproductorMp3\ReproductorMp3.csproj">
+    <ProjectReference Include="..\ReproductorMp3\ReproductorComponente.csproj">
       <Project>{254BF227-969F-4103-B292-E3CD193AA48D}</Project>
-      <Name>ReproductorMp3</Name>
+      <Name>ReproductorComponente</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

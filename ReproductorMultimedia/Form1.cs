@@ -50,6 +50,7 @@ namespace ReproductorMultimedia
                 reproMultimedia1.Segundos++;
 
             }
+            
 
 
 
