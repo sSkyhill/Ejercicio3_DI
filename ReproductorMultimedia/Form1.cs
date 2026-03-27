@@ -45,6 +45,10 @@ namespace ReproductorMultimedia
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if(reproMultimedia1.Segundos == 59)
+            {
+                reproMultimedia1.Minutos++;
+            }
             if (archivos.Length > 0)
             {
                 reproMultimedia1.Segundos++;

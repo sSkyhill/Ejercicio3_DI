@@ -44,6 +44,8 @@ namespace ReproductorMp3
                 {
                     minutos = value;
                 }
+                etiquetaTiempo.Text = $"{Minutos:00}:{Segundos:00}";
+                Refresh();
             }
         }
         [Category("Mis propiedades")]
@@ -85,7 +87,7 @@ namespace ReproductorMp3
         protected virtual void OnDesbordaTiempo(EventArgs e)
         {
             DesbordaTiempo?.Invoke(this, e);
-            Minutos++;
+            
         }
 
 
